@@ -5,6 +5,7 @@ package htw.berlin.prog2.ha1;
  * https://www.online-calculator.com/ aufgerufen werden kann (ohne die Memory-Funktionen)
  * und dessen Bildschirm bis zu zehn Ziffern plus einem Dezimaltrennzeichen darstellen kann.
  * Enthält mit Absicht noch diverse Bugs oder unvollständige Funktionen.
+ * #Hinzugefügt wurde die Variable clearButtenCE, um das Verhalten des c/CE knopfes des Taschenrechners zu imitieren.
  */
 public class Calculator {
 
@@ -54,6 +55,9 @@ public class Calculator {
      * Wird daraufhin noch einmal die Taste gedrückt, dann werden auch zwischengespeicherte
      * Werte sowie der aktuelle Operationsmodus zurückgesetzt, so dass der Rechner wieder
      * im Ursprungszustand ist.
+     * #Hinzugefügt wurde eine if Anweisung, um zwischen dem c und dem ce knopf zu unterscheiden dar der
+     * c knopf nur den aktuell auf dem bildschirm angezeikten wert löscht und der ce knopf auch die gespeicherten anweisungen
+     * und werte löscht.
      */
     public void pressClearKey() {
        // screen = "0";
@@ -115,6 +119,8 @@ public class Calculator {
      * Seite hinzu und aktualisiert den Bildschirm. Daraufhin eingegebene Zahlen werden rechts vom
      * Trennzeichen angegeben und daher als Dezimalziffern interpretiert.
      * Beim zweimaligem Drücken, oder wenn bereits ein Trennzeichen angezeigt wird, passiert nichts.
+     * #Hinzugefügt wurde eine zurücksetzung der gespeicherten werte nach dem ausrechnen einer (1/x) rechnung
+     * sollte ein . verwendet werden auf das ergebnis.
      */
     public void pressDotKey() {
         if (latestOperation.equals("1/x")) {
