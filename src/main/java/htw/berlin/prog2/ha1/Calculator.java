@@ -31,7 +31,7 @@ public class Calculator {
      * Führt in jedem Fall dazu, dass die gerade gedrückte Ziffer auf dem Bildschirm angezeigt
      * oder rechts an die zuvor gedrückte Ziffer angehängt angezeigt wird.
      * @param digit Die Ziffer, deren Taste gedrückt wurde
-     * Nach einem inversiv werden automatisch alle werte gelöscht.
+     * Nach einem inversiv werden automatisch alle werte gelöscht, die vorher gespeichert wurden.
      */
     public void pressDigitKey(int digit) {
         if(digit > 9 || digit < 0) throw new IllegalArgumentException();
