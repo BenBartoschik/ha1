@@ -6,6 +6,7 @@ package htw.berlin.prog2.ha1;
  * und dessen Bildschirm bis zu zehn Ziffern plus einem Dezimaltrennzeichen darstellen kann.
  * Enthält mit Absicht noch diverse Bugs oder unvollständige Funktionen.
  * #Hinzugefügt wurde die Variable clearButtenCE, um das Verhalten des c/CE knopfes des Taschenrechners zu imitieren.
+ * Durch diese wird ermöglicht genauer zu bestimmen was gelöscht werden soll.
  */
 public class Calculator {
 
@@ -30,6 +31,7 @@ public class Calculator {
      * Führt in jedem Fall dazu, dass die gerade gedrückte Ziffer auf dem Bildschirm angezeigt
      * oder rechts an die zuvor gedrückte Ziffer angehängt angezeigt wird.
      * @param digit Die Ziffer, deren Taste gedrückt wurde
+     * Nach einem inversiv werden automatisch alle werte gelöscht.
      */
     public void pressDigitKey(int digit) {
         if(digit > 9 || digit < 0) throw new IllegalArgumentException();
